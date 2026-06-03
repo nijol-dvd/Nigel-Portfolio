@@ -1,0 +1,1924 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- PROFESSIONAL SEO & SEARCH ENGINE TAGS -->
+    <title>Nigel James Lumanlan David | IT Developer & Leader</title>
+    <meta
+      name="description"
+      content="The official portfolio of Nigel James Lumanlan David. IT Student, Software Developer, and USC Chairperson at National University Clark. Explore technical projects, certifications, and leadership history."
+    />
+    <meta
+      name="keywords"
+      content="Nigel James David, IT Developer, Web Development, Programmer, National University Clark, USC Chairperson, Software Engineer Portfolio"
+    />
+    <meta name="author" content="Nigel James Lumanlan David" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- FAVICON (Browser Tab Logo) -->
+    <link rel="icon" type="image/png" href="NLD-Logo-Tab.png" />
+
+    <!-- Sleek Modern & Tech Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="portfolio.css" />
+
+    <!-- FORCE SCROLL TO TOP ON REFRESH -->
+    <script>
+      if (history.scrollRestoration) {
+        history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+    </script>
+  </head>
+  <body onload="window.scrollTo(0, 0)">
+    <!-- LIGHTBOX FOR CERTIFICATES -->
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="full-img" />
+    </div>
+
+    <!-- CONFIRMATION MODAL -->
+    <div id="confirm-modal" class="lightbox">
+      <div
+        class="glass-panel modal-content tilt-element"
+        data-tilt
+        data-tilt-max="5"
+        style="
+          text-align: center;
+          padding: 3rem;
+          max-width: 400px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-color: var(--accent-gold);
+          box-shadow: 0 0 30px rgba(250, 204, 21, 0.2);
+        "
+      >
+        <i
+          class="fa-solid fa-circle-question"
+          style="
+            font-size: 4rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px var(--accent-gold);
+          "
+        ></i>
+        <h3
+          class="art-font"
+          style="font-size: 1.5rem; color: white; margin-bottom: 0.5rem"
+        >
+          Confirm Transmission
+        </h3>
+        <p
+          class="tech-font"
+          style="color: var(--text-muted); margin-bottom: 2rem"
+        >
+          Are you sure you want to send this message to Nigel James David?
+        </p>
+        <div style="display: flex; gap: 1rem; width: 100%">
+          <button
+            id="btn-no"
+            class="btn btn-outline tech-font w-100 hover-target"
+            style="border-color: #ef4444; color: #ef4444 !important"
+          >
+            Cancel
+          </button>
+          <button id="btn-yes" class="btn btn-3d tech-font w-100 hover-target">
+            Proceed
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS MODAL FOR EMAIL TRANSMISSION -->
+    <div id="success-modal" class="lightbox">
+      <div
+        class="glass-panel modal-content tilt-element"
+        data-tilt
+        data-tilt-max="5"
+        style="
+          text-align: center;
+          padding: 4rem 3rem;
+          max-width: 450px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        "
+      >
+        <i
+          class="fa-solid fa-circle-check"
+          style="
+            font-size: 5rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 30px var(--accent-cyan);
+          "
+        ></i>
+        <h3
+          class="art-font"
+          style="
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-white);
+            text-transform: uppercase;
+          "
+        >
+          Transmission<br />Successful
+        </h3>
+        <p
+          class="tech-font"
+          style="
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+          "
+        >
+          Your message has been securely routed to my inbox. An automated
+          confirmation has been dispatched to your email address.
+        </p>
+        <button
+          id="close-modal-btn"
+          class="btn btn-3d hover-target tech-font w-100"
+        >
+          ACKNOWLEDGE
+        </button>
+      </div>
+    </div>
+
+    <!-- ADVANCED TECH RADAR CURSOR -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring">
+      <div class="crosshair-x"></div>
+      <div class="crosshair-y"></div>
+    </div>
+
+    <!-- SCROLL PROGRESS TRACKER -->
+    <div class="scroll-tracker-container">
+      <div class="scroll-tracker-bar" id="scroll-tracker-bar"></div>
+      <div class="scroll-splash-particles" id="scroll-splash">
+        <span></span><span></span><span></span><span></span><span></span
+        ><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- FLOATING TABLE OF CONTENTS -->
+    <div class="floating-toc">
+      <a
+        href="#home"
+        class="toc-dot hover-target active"
+        data-tooltip="HOME"
+      ></a>
+      <a href="#about" class="toc-dot hover-target" data-tooltip="ABOUT"></a>
+      <a href="#skills" class="toc-dot hover-target" data-tooltip="SKILLS"></a>
+      <a
+        href="#portfolio"
+        class="toc-dot hover-target"
+        data-tooltip="PORTFOLIO"
+      ></a>
+      <a
+        href="#journey"
+        class="toc-dot hover-target"
+        data-tooltip="CHRONOLOGY"
+      ></a>
+      <a
+        href="#contact"
+        class="toc-dot hover-target"
+        data-tooltip="CONTACT"
+      ></a>
+    </div>
+
+    <!-- CINEMATIC SLOW LOADER (SINGLE LOGO) -->
+    <div id="loader-wrapper">
+      <div class="loader-content">
+        <div class="water-logo-container" id="water-logo">
+          <svg
+            class="combined-logo cinematic-draw"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20,80 V20 L60,80 V20"
+                stroke="currentColor"
+                stroke-width="8"
+                fill="none"
+              />
+              <path
+                d="M20,80 H70"
+                stroke="currentColor"
+                stroke-width="8"
+                fill="none"
+              />
+              <path
+                d="M60,20 C95,20 95,80 60,80"
+                stroke="currentColor"
+                stroke-width="8"
+                fill="none"
+              />
+            </g>
+          </svg>
+        </div>
+        <p class="loader-text" id="loader-status">
+          SYNCHRONIZING NEURAL LINK...
+        </p>
+        <div class="loader-bar-container">
+          <div class="loader-bar" id="loader-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cinematic-vignette"></div>
+    <div id="glow-orbs"></div>
+    <div id="particles-js"></div>
+
+    <!-- NAVIGATION WITH RAINBOW SPINNER LOGO -->
+    <nav class="nav-3d">
+      <a href="#home" class="nav-logo hover-target" id="nav-logo">
+        <svg
+          class="combined-logo-nav"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20,80 V20 L60,80 V20"
+            stroke="currentColor"
+            stroke-width="10"
+            fill="none"
+          />
+          <path
+            d="M20,80 H70"
+            stroke="currentColor"
+            stroke-width="10"
+            fill="none"
+          />
+          <path
+            d="M60,20 C95,20 95,80 60,80"
+            stroke="currentColor"
+            stroke-width="10"
+            fill="none"
+          />
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li>
+          <a href="#about" class="hover-target glitch-text" data-text="ABOUT"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a href="#skills" class="hover-target glitch-text" data-text="SKILLS"
+            >SKILLS</a
+          >
+        </li>
+        <li>
+          <a
+            href="#portfolio"
+            class="hover-target glitch-text"
+            data-text="PORTFOLIO"
+            >PORTFOLIO</a
+          >
+        </li>
+        <li>
+          <a
+            href="#journey"
+            class="hover-target glitch-text"
+            data-text="JOURNEY"
+            >JOURNEY</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="hover-target glitch-text"
+            data-text="CONTACT"
+            >CONTACT</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 1. MODERN SLEEK HERO SECTION -->
+    <section id="home" class="hero toc-section">
+      <div class="hero-grid">
+        <div class="hero-text trailer-animate">
+          <div class="hero-pill hover-target">
+            <i class="fa-solid fa-code"></i> Ready to Code with Purpose and Lead
+            Fearlessly
+          </div>
+
+          <h3 class="greeting art-font">
+            Hello, I'm
+            <span style="color: var(--accent-gold)">NIGEL JAMES DAVID</span>
+          </h3>
+          <h1 class="name title-3d cinematic-title">
+            Software Developer<br />& Tech Leader
+          </h1>
+
+          <!-- ENDLESS TYPING WITH INTACT CURSOR -->
+          <div class="typewriter-container">
+            <h2 class="title tech-font" style="color: var(--accent-gold)">
+              <span class="typewriter-text">IT STUDENT</span
+              ><span class="cursor-blink">|</span>
+            </h2>
+          </div>
+
+          <p class="hero-desc tech-font">
+            A dedicated IT student currently in the 3rd Term of A.Y. 2025-2026
+            at National University Clark. Proven leader with a strong background
+            in software development, data management, and creative design,
+            aiming to deliver impactful tech solutions.
+          </p>
+          <p class="hero-desc tech-font">
+            Driven by innovation, powered by technology, and inspired to create
+            solutions that matter.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#portfolio" class="btn btn-3d hover-target tech-font"
+              >Explore More</a
+            >
+            <a
+              href="NLD-CV-CTWBDEVL.pdf"
+              download="NLD-CV-CTWBDEVL.pdf"
+              class="btn btn-3d hover-target tech-font btn-outline"
+              ><i class="fa-solid fa-download" style="margin-right: 8px"></i>
+              Download CV</a
+            >
+            <a
+              href="#contact"
+              class="btn btn-3d hover-target tech-font btn-outline"
+              ><i class="fa-solid fa-envelope" style="margin-right: 8px"></i>
+              Contact Me</a
+            >
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card glass-panel hover-target">
+              <i class="fa-solid fa-code stat-icon"></i>
+              <h3 class="art-font">5+</h3>
+              <p class="tech-font">Total Projects</p>
+            </div>
+            <div class="stat-card glass-panel hover-target">
+              <i class="fa-solid fa-certificate stat-icon"></i>
+              <h3 class="art-font">5+</h3>
+              <p class="tech-font">Certificates</p>
+            </div>
+            <div class="stat-card glass-panel hover-target">
+              <i class="fa-solid fa-chart-line stat-icon"></i>
+              <h3 class="art-font">2+</h3>
+              <p class="tech-font">Years of Experience</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-graphic trailer-animate">
+          <div id="hero-anchor" class="profile-placeholder"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT -->
+    <section id="about" class="container toc-section">
+      <div class="section-header trailer-animate">
+        <h2 class="section-title art-font text-glow">01 // About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div
+          id="about-anchor"
+          class="profile-placeholder trailer-animate"
+        ></div>
+        <div
+          class="about-content glass-panel trailer-animate tilt-element"
+          data-tilt
+          data-tilt-max="3"
+          data-tilt-speed="400"
+        >
+          <p class="lead-text tech-font">
+            Translating complex logic into functional web systems and leading
+            communities with the same precision.
+          </p>
+
+          <p class="tech-font">
+            As a Bachelor of Science in Information Technology student at
+            National University Clark, my workspace bridges the gap between
+            backend servers and the student body. My focus lies heavily in
+            front-end web development, data science, and systems architecture.
+            To me, effective leadership and writing clean code share the exact
+            same foundational logic—they both require meticulous
+            problem-solving, structural integrity, and continuous optimization.
+          </p>
+
+          <p class="tech-font" style="margin-top: 1rem">
+            Whether I am engineering responsive HTML/CSS web interfaces for
+            CTWBDEVL, querying complex relational databases, or orchestrating
+            massive university-wide tech events as the President of C.O.D.E., my
+            approach is identical: I build environments where both digital
+            systems and human teams can thrive simultaneously.
+          </p>
+
+          <p
+            class="tech-font text-glow"
+            style="
+              margin-top: 1.5rem;
+              font-weight: 700;
+              color: var(--accent-cyan);
+              font-size: 1.1rem;
+            "
+          >
+            Always driven to compile solutions, deploy innovations, and serve as
+            your USC Chairperson—because the best algorithms are those that
+            empower the people.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS WITH FONTAWESOME ARSENAL LOGOS -->
+    <section id="skills" class="container bg-alt toc-section">
+      <div class="section-header trailer-animate">
+        <h2 class="section-title art-font text-glow">02 // Tech Arsenal</h2>
+      </div>
+      <div class="filter-controls trailer-animate">
+        <button
+          class="filter-btn active hover-target tech-font"
+          data-filter="all"
+        >
+          ALL
+        </button>
+        <button
+          class="filter-btn hover-target tech-font"
+          data-filter="programming"
+        >
+          PROGRAMMING
+        </button>
+        <button
+          class="filter-btn hover-target tech-font"
+          data-filter="databases"
+        >
+          DATABASES
+        </button>
+        <button class="filter-btn hover-target tech-font" data-filter="tools">
+          TOOLS
+        </button>
+        <button
+          class="filter-btn hover-target tech-font"
+          data-filter="hardware"
+        >
+          HARDWARE
+        </button>
+        <button
+          class="filter-btn hover-target tech-font"
+          data-filter="productivity"
+        >
+          PRODUCTIVITY
+        </button>
+        <button
+          class="filter-btn hover-target tech-font"
+          data-filter="leadership"
+        >
+          LEADERSHIP
+        </button>
+      </div>
+      <div class="skills-grid" id="skills-grid">
+        <div
+          class="skill-category glass-panel trailer-animate tilt-element filter-item"
+          data-category="programming"
+          data-tilt
+          data-tilt-max="8"
+        >
+          <h3 class="pop-out tech-font">
+            <i class="fa-solid fa-code icon-gold"></i> [ PROGRAMMING LANGUAGES ]
+          </h3>
+          <div class="tags pop-out tech-font">
+            <span class="hover-target">CSS</span
+            ><span class="hover-target">HTML</span
+            ><span class="hover-target">Java</span
+            ><span class="hover-target">JavaScript</span
+            ><span class="hover-target">Kotlin</span
+            ><span class="hover-target">Python</span>
+          </div>
+        </div>
+        <div
+          class="skill-category glass-panel trailer-animate tilt-element filter-item"
+          data-category="databases"
+          data-tilt
+          data-tilt-max="8"
+        >
+          <h3 class="pop-out tech-font">
+            <i class="fa-solid fa-database icon-gold"></i> [ DATABASES &
+            ANALYSIS ]
+          </h3>
+          <div class="tags pop-out tech-font">
+            <span class="hover-target">Database Systems Design</span
+            ><span class="hover-target">Firebase Firestore</span
+            ><span class="hover-target">Microsoft Excel (Data Analysis)</span
+            ><span class="hover-target">MySQL</span>
+          </div>
+        </div>
+        <div
+          class="skill-category glass-panel trailer-animate tilt-element filter-item"
+          data-category="tools"
+          data-tilt
+          data-tilt-max="8"
+        >
+          <h3 class="pop-out tech-font">
+            <i class="fa-solid fa-screwdriver-wrench icon-gold"></i> [
+            DEVELOPMENT TOOLS ]
+          </h3>
+          <div class="tags pop-out tech-font">
+            <span class="hover-target">Android Studio</span
+            ><span class="hover-target">Git</span
+            ><span class="hover-target">GitHub</span>
+          </div>
+        </div>
+        <div
+          class="skill-category glass-panel trailer-animate tilt-element filter-item"
+          data-category="hardware"
+          data-tilt
+          data-tilt-max="8"
+        >
+          <h3 class="pop-out tech-font">
+            <i class="fa-solid fa-microchip icon-gold"></i> [ HARDWARE &
+            NETWORKING ]
+          </h3>
+          <div class="tags pop-out tech-font">
+            <span class="hover-target">Basic Networking</span
+            ><span class="hover-target">Hardware Installation</span
+            ><span class="hover-target">Peripheral Installation</span
+            ><span class="hover-target">Software Installation</span>
+          </div>
+        </div>
+        <div
+          class="skill-category glass-panel trailer-animate tilt-element filter-item"
+          data-category="productivity"
+          data-tilt
+          data-tilt-max="8"
+        >
+          <h3 class="pop-out tech-font">
+            <i class="fa-solid fa-chart-pie icon-gold"></i> [ PRODUCTIVITY
+            SOFTWARE ]
+          </h3>
+          <div class="tags pop-out tech-font">
+            <span class="hover-target">Canva</span
+            ><span class="hover-target">Google Workspace</span
+            ><span class="hover-target">Microsoft Office Suite</span
+            ><span class="hover-target">Microsoft Teams</span>
+          </div>
+        </div>
+        <div
+          class="skill-category glass-panel trailer-animate tilt-element filter-item"
+          data-category="leadership"
+          data-tilt
+          data-tilt-max="8"
+        >
+          <h3 class="pop-out tech-font">
+            <i class="fa-solid fa-users-gear icon-gold"></i> [ SOFT SKILLS &
+            LEADERSHIP ]
+          </h3>
+          <div class="tags pop-out tech-font">
+            <span class="hover-target">Digital Filing & Absolute Sorting</span
+            ><span class="hover-target">Event Coordination</span
+            ><span class="hover-target">Project Management</span
+            ><span class="hover-target">Strict System Management</span
+            ><span class="hover-target">Team Leadership</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FULL BLAST PORTFOLIO SECTION -->
+    <section id="portfolio" class="container toc-section">
+      <div class="portfolio-header trailer-animate">
+        <h1 class="portfolio-title art-font">PORTFOLIO</h1>
+        <div class="portfolio-toggle">
+          <button id="toggle-projects" class="toggle-btn active hover-target">
+            <i class="fa-solid fa-code"></i> Projects
+          </button>
+          <button id="toggle-certs" class="toggle-btn hover-target">
+            <i class="fa-solid fa-certificate"></i> Certifications
+          </button>
+        </div>
+      </div>
+
+      <!-- PROJECTS VIEW -->
+      <div id="view-projects" class="portfolio-view active">
+        <h3 class="subsection-title tech-font trailer-animate">
+          APPLICATION SOFTWARE
+        </h3>
+        <div
+          class="project-card glass-panel trailer-animate tilt-element hover-target"
+          data-tilt
+          data-tilt-max="2"
+          data-tilt-glare="true"
+          data-tilt-max-glare="0.1"
+        >
+          <div class="project-grid-2col pop-out">
+            <div class="project-info-left">
+              <h3
+                class="art-font"
+                style="
+                  font-size: 3rem;
+                  color: #fff;
+                  line-height: 1.1;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                Multi-TASK-erz
+              </h3>
+              <p
+                class="tech-font"
+                style="
+                  color: var(--accent-cyan);
+                  font-weight: 600;
+                  letter-spacing: 2px;
+                "
+              >
+                DESKTOP CRUD APPLICATION
+              </p>
+              <p
+                class="tech-font"
+                style="margin: 1.5rem 0; color: var(--text-muted)"
+              >
+                A desktop task management application built using Java Swing and
+                MySQL. Designed to improve productivity through organized task
+                tracking, CRUD operations, status management, and real-time
+                interaction with database-driven records.
+              </p>
+              <a
+                href="https://github.com/gxbiyel/JAVA_OOP_Multi-TASK-erz"
+                target="_blank"
+                class="btn btn-3d hover-target tech-font"
+                style="padding: 0.8rem 2rem"
+                >VIEW SOURCE CODE</a
+              >
+              <h4
+                class="tech-font"
+                style="
+                  margin-top: 2.5rem;
+                  margin-bottom: 1rem;
+                  color: var(--text-white);
+                  font-size: 0.9rem;
+                  letter-spacing: 1px;
+                "
+              >
+                TECHNOLOGIES USED
+              </h4>
+              <div class="tags tech-font">
+                <span class="hover-target">Java</span
+                ><span class="hover-target">Java Swing</span
+                ><span class="hover-target">JDBC</span
+                ><span class="hover-target">MySQL</span>
+              </div>
+            </div>
+            <div class="project-info-right">
+              <img
+                src="NLD-MULTIT-CTWBDEVL.png"
+                alt="Multi-Task-erz Screenshot"
+                class="project-screenshot"
+                onerror="
+                  this.src =
+                    'https://via.placeholder.com/600x400/030b17/00f0ff?text=Multi-TASK-erz'
+                "
+              />
+              <div class="key-features">
+                <h4
+                  class="tech-font"
+                  style="
+                    color: var(--accent-cyan);
+                    margin-bottom: 1rem;
+                    font-size: 1.2rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                  "
+                >
+                  <i class="fa-solid fa-star"></i> Key Features
+                </h4>
+                <ul class="tech-font">
+                  <li>Task CRUD operations</li>
+                  <li>Status tracking system</li>
+                  <li>Input validation handling</li>
+                  <li>Task searching and filtering</li>
+                  <li>Database synchronization using JDBC</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="project-card glass-panel trailer-animate tilt-element hover-target"
+          data-tilt
+          data-tilt-max="2"
+          data-tilt-glare="true"
+          data-tilt-max-glare="0.1"
+          style="margin-top: 3rem"
+        >
+          <div class="project-grid-2col pop-out">
+            <div class="project-info-left">
+              <h3
+                class="art-font"
+                style="
+                  font-size: 3rem;
+                  color: #fff;
+                  line-height: 1.1;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                BullTask Patrol
+              </h3>
+              <p
+                class="tech-font"
+                style="
+                  color: var(--accent-cyan);
+                  font-weight: 600;
+                  letter-spacing: 2px;
+                "
+              >
+                COLLABORATIVE MOBILE TASK MANAGEMENT
+              </p>
+              <p
+                class="tech-font"
+                style="margin: 1.5rem 0; color: var(--text-muted)"
+              >
+                A collaborative mobile task management application developed
+                using Kotlin and Firebase. Designed to improve productivity
+                through organized task tracking, real-time updates, class-based
+                collaboration, task status management, and seamless interaction
+                between users.
+              </p>
+              <a
+                href="https://github.com/dnmrkcs/BullTask_Patrol"
+                target="_blank"
+                class="btn btn-3d hover-target tech-font"
+                style="padding: 0.8rem 2rem"
+                >VIEW SOURCE CODE</a
+              >
+              <h4
+                class="tech-font"
+                style="
+                  margin-top: 2.5rem;
+                  margin-bottom: 1rem;
+                  color: var(--text-white);
+                  font-size: 0.9rem;
+                  letter-spacing: 1px;
+                "
+              >
+                TECHNOLOGIES USED
+              </h4>
+              <div class="tags tech-font">
+                <span class="hover-target">Kotlin</span
+                ><span class="hover-target">Git</span
+                ><span class="hover-target">GitHub</span
+                ><span class="hover-target">Firestore</span
+                ><span class="hover-target">Android Studio</span>
+              </div>
+            </div>
+            <div class="project-info-right">
+              <img
+                src="NLD-BTP-CTWBDEVL.png"
+                alt="BullTask Patrol Screenshot"
+                class="project-screenshot"
+                onerror="
+                  this.src =
+                    'https://via.placeholder.com/600x400/030b17/00f0ff?text=BullTask+Patrol'
+                "
+              />
+              <div class="key-features">
+                <h4
+                  class="tech-font"
+                  style="
+                    color: var(--accent-cyan);
+                    margin-bottom: 1rem;
+                    font-size: 1.2rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                  "
+                >
+                  <i class="fa-solid fa-star"></i> Key Features
+                </h4>
+                <ul class="tech-font">
+                  <li>Kotlin-based UI</li>
+                  <li>Firebase Firestore cloud integration</li>
+                  <li>Class-based collaboration</li>
+                  <li>Moderator roles</li>
+                  <li>In-app notifications</li>
+                  <li>Deadline automation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3
+          class="subsection-title tech-font trailer-animate"
+          style="margin-top: 5rem"
+        >
+          LABORATORY ACTIVITIES
+        </h3>
+        <h4
+          class="tech-font text-glow trailer-animate"
+          style="
+            color: var(--accent-cyan);
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            margin-bottom: 2rem;
+          "
+        >
+          MIDTERM ARCHIVES
+        </h4>
+
+        <!-- STABILIZED CARDS (Removed 'pop-out' from content, reduced tilt to 3 for guaranteed clicking) -->
+        <div class="grid pubmat-grid" style="margin-bottom: 4rem">
+          <div
+            class="card glass-panel trailer-animate tilt-element hover-target"
+            data-tilt
+            data-tilt-max="3"
+            data-tilt-glare="true"
+            data-tilt-max-glare="0.3"
+          >
+            <div
+              class="card-content"
+              style="display: flex; flex-direction: column; height: 100%"
+            >
+              <div class="card-header tech-font">MIDTERM LAB 01</div>
+              <h3 class="art-font">Song Lyrics</h3>
+              <p class="tech-font">
+                Structural formatting of text using foundational HTML tags.
+              </p>
+              <div style="display: flex; gap: 1.5rem; margin-top: auto">
+                <a
+                  href="labs/lab1-song-lyrics.html"
+                  target="_blank"
+                  class="link-btn tech-font hover-target"
+                  >EXECUTE &rarr;</a
+                ><a
+                  href="https://github.com/nijol-dvd/Nigel-Portfolio/blob/main/labs/lab1-song-lyrics.html"
+                  target="_blank"
+                  class="link-btn tech-font hover-target"
+                  style="
+                    color: var(--text-muted);
+                    border-color: var(--text-muted);
+                  "
+                  >CODE &lt;/&gt;</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="card glass-panel trailer-animate tilt-element hover-target"
+            data-tilt
+            data-tilt-max="3"
+            data-tilt-glare="true"
+            data-tilt-max-glare="0.3"
+          >
+            <div
+              class="card-content"
+              style="display: flex; flex-direction: column; height: 100%"
+            >
+              <div class="card-header tech-font">MIDTERM LAB 02</div>
+              <h3 class="art-font">Resume</h3>
+              <p class="tech-font">
+                Building a structured curriculum vitae utilizing HTML tables and
+                semantic markup.
+              </p>
+              <div style="display: flex; gap: 1.5rem; margin-top: auto">
+                <a
+                  href="labs/lab2-resume.html"
+                  target="_blank"
+                  class="link-btn tech-font hover-target"
+                  >EXECUTE &rarr;</a
+                ><a
+                  href="https://github.com/nijol-dvd/Nigel-Portfolio/blob/main/labs/lab2-resume.html"
+                  target="_blank"
+                  class="link-btn tech-font hover-target"
+                  style="
+                    color: var(--text-muted);
+                    border-color: var(--text-muted);
+                  "
+                  >CODE &lt;/&gt;</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="card glass-panel trailer-animate tilt-element hover-target"
+            data-tilt
+            data-tilt-max="3"
+            data-tilt-glare="true"
+            data-tilt-max-glare="0.3"
+          >
+            <div
+              class="card-content"
+              style="display: flex; flex-direction: column; height: 100%"
+            >
+              <div class="card-header tech-font">MIDTERM LAB 03</div>
+              <h3 class="art-font">Lists</h3>
+              <p class="tech-font">
+                Organizing data hierarchies using nested, ordered, and unordered
+                list structures.
+              </p>
+              <div style="display: flex; gap: 1.5rem; margin-top: auto">
+                <a
+                  href="labs/lab3-lists.html"
+                  target="_blank"
+                  class="link-btn tech-font hover-target"
+                  >EXECUTE &rarr;</a
+                ><a
+                  href="https://github.com/nijol-dvd/Nigel-Portfolio/blob/main/labs/lab3-lists.html"
+                  target="_blank"
+                  class="link-btn tech-font hover-target"
+                  style="
+                    color: var(--text-muted);
+                    border-color: var(--text-muted);
+                  "
+                  >CODE &lt;/&gt;</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="card glass-panel trailer-animate tilt-element hover-target"
+            data-tilt
+            data-tilt-max="3"
+            data-tilt-glare="true"
+            data-tilt-max-glare="0.3"
+          >
+            <div
+              class="card-content"
+              style="display: flex; flex-direction: column; height: 100%"
+            >
+              <div class="card-header tech-font">MIDTERM LAB 04</div>
+              <h3 class="art-font">HTML Image Map</h3>
+              <p class="tech-font">
+                Interactive graphic interface using precise clickable coordinate
+                mapping.
+              </p>
+              <div style="display: flex; gap: 1.5rem; margin-top: auto">
+                <a
+                  href="https://elaborate-cactus-0f754b.netlify.app/home"
+                  target="_blank"
+                  class="link-btn tech-font hover-target"
+                  >EXECUTE &rarr;</a
+                ><a
+                  href="https://github.com/nijol-dvd/Nigel-Portfolio/tree/main/labs/lab4"
+                  target="_blank"
+                  class="link-btn tech-font hover-target"
+                  style="
+                    color: var(--text-muted);
+                    border-color: var(--text-muted);
+                  "
+                  >CODE &lt;/&gt;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4
+          class="tech-font text-glow trailer-animate"
+          style="
+            color: var(--accent-cyan);
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            margin-bottom: 2rem;
+          "
+        >
+          FINAL ARCHIVES
+        </h4>
+        <div class="grid pubmat-grid">
+          <!-- STABILIZED FINALS CARD -->
+          <div
+            class="card glass-panel trailer-animate tilt-element hover-target"
+            data-tilt
+            data-tilt-max="3"
+            data-tilt-glare="true"
+            data-tilt-max-glare="0.3"
+          >
+            <div
+              class="card-content"
+              style="display: flex; flex-direction: column; height: 100%"
+            >
+              <div class="card-header tech-font">FINALS LAB 01</div>
+              <h3 class="art-font">NU Quest</h3>
+              <p class="tech-font">
+                A fully integrated web experience testing all foundational and
+                advanced system concepts.
+              </p>
+              <div style="display: flex; gap: 1.5rem; margin-top: auto">
+                <a
+                  href="https://finals-lab-a1-nu-quest-david-njl.great-site.net/?i=1&classId=a5419ccc-dc77-4e5c-b1c0-fbb823e052c2&assignmentId=12825a13-726a-4958-a9b8-8d7b346493a1&submissionId=1b52d06c-68cd-7efb-6cb3-000d6a94e005"
+                  target="_blank"
+                  class="link-btn tech-font hover-target"
+                  >EXECUTE &rarr;</a
+                >
+                <a
+                  href="https://github.com/nijol-dvd/Nigel-Portfolio/blob/main/labs/finals-lab1-nu-quest.html"
+                  target="_blank"
+                  class="link-btn tech-font hover-target"
+                  style="
+                    color: var(--text-muted);
+                    border-color: var(--text-muted);
+                  "
+                  >CODE &lt;/&gt;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3
+          class="subsection-title tech-font trailer-animate"
+          style="margin-top: 5rem"
+        >
+          CLIENT DEPLOYMENTS
+        </h3>
+        <div
+          class="project-card glass-panel trailer-animate tilt-element hover-target"
+          data-tilt
+          data-tilt-max="3"
+          data-tilt-glare="true"
+          data-tilt-max-glare="0.1"
+        >
+          <div class="project-info pop-out">
+            <h3 class="art-font" style="font-size: 3rem; color: #fff">
+              Den Mark Soriano Portfolio
+            </h3>
+            <p
+              class="tech-font"
+              style="margin-bottom: 0.5rem; color: var(--accent-cyan)"
+            >
+              Skills Applied: Client Communication, UI/UX Implementation,
+              Multi-page Routing, CSS Animations
+            </p>
+            <p class="tech-font">
+              Designed and deployed a responsive, multi-page professional
+              portfolio for a Graphic Designer & Developer. Engineered entirely
+              from scratch to match client brand guidelines, featuring dedicated
+              project routing, interactive galleries, and optimized layout
+              architecture.
+            </p>
+            <div
+              style="
+                display: flex;
+                gap: 1rem;
+                margin-top: 2rem;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="DenMark-Portfolio/client.html"
+                target="_blank"
+                class="btn btn-3d hover-target tech-font"
+                >VIEW LIVE SITE</a
+              >
+              <a
+                href="https://github.com/nijol-dvd/Nigel-Portfolio/tree/main/DenMark-Portfolio"
+                target="_blank"
+                class="btn btn-3d hover-target tech-font btn-outline"
+                >VIEW GITHUB CODE</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERTIFICATIONS VIEW -->
+      <div id="view-certs" class="portfolio-view" style="display: none">
+        <div class="cert-stack">
+          <div class="card glass-panel cert-card cert-1">
+            <img
+              src="NLD-COMPTIA.jpg"
+              alt="CompTIA ITF+"
+              class="cert-badge cert-img"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/200/003135/10A4B0?text=CompTIA'
+              "
+            />
+            <div>
+              <h4 class="tech-font cert-issuer">ISSUED BY COMPTIA</h4>
+              <h3 class="art-font cert-title">
+                CompTIA IT Fundamentals+ (ITF+)
+              </h3>
+              <p class="tech-font cert-desc">
+                Validated knowledge to identify and explain the basics of
+                computing, IT infrastructure, software development, and
+                security.
+              </p>
+            </div>
+          </div>
+          <div class="card glass-panel cert-card cert-2">
+            <img
+              src="NLD-MOS-Excel.jpg"
+              alt="Excel"
+              class="cert-badge cert-img"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/200/003135/10A4B0?text=Excel'
+              "
+            />
+            <div>
+              <h4 class="tech-font cert-issuer">ISSUED BY MICROSOFT</h4>
+              <h3 class="art-font cert-title">MOS: Excel Associate</h3>
+              <p class="tech-font cert-desc">
+                Demonstrated ability to complete tasks independently, use
+                graphic elements to represent data visually, and manage
+                workbooks.
+              </p>
+            </div>
+          </div>
+          <div class="card glass-panel cert-card cert-3">
+            <img
+              src="NLD-ITS-Databases.jpg"
+              alt="Databases"
+              class="cert-badge cert-img"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/200/003135/10A4B0?text=Databases'
+              "
+            />
+            <div>
+              <h4 class="tech-font cert-issuer">ISSUED BY CERTIPORT</h4>
+              <h3 class="art-font cert-title">IT Specialist - Databases</h3>
+              <p class="tech-font cert-desc">
+                Foundational knowledge of how to design and query relational
+                databases, such as MySQL, Microsoft SQL Server, or Oracle.
+              </p>
+            </div>
+          </div>
+          <div class="card glass-panel cert-card cert-4">
+            <img
+              src="NLD-MOS-Word.jpg"
+              alt="Word"
+              class="cert-badge cert-img"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/200/003135/10A4B0?text=Word'
+              "
+            />
+            <div>
+              <h4 class="tech-font cert-issuer">ISSUED BY MICROSOFT</h4>
+              <h3 class="art-font cert-title">MOS: Word Associate</h3>
+              <p class="tech-font cert-desc">
+                Demonstrated principal features of Word by creating and editing
+                large projects including reports, résumés, and correspondence.
+              </p>
+            </div>
+          </div>
+          <div class="card glass-panel cert-card cert-5">
+            <img
+              src="NLD-ITS-HTMLCSS.jpg"
+              alt="HTML CSS"
+              class="cert-badge cert-img"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/200/003135/10A4B0?text=HTML+CSS'
+              "
+            />
+            <div>
+              <h4 class="tech-font cert-issuer">ISSUED BY CERTIPORT</h4>
+              <h3 class="art-font cert-title">IT Specialist - HTML & CSS</h3>
+              <p class="tech-font cert-desc">
+                Proven ability to effectively structure a webpage using HTML
+                elements and create and apply styles using CSS.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CHRONOLOGY (FILTERED TIMELINE) -->
+    <section id="journey" class="container bg-alt toc-section">
+      <div class="section-header trailer-animate">
+        <h2 class="section-title art-font text-glow">05 // Chronology</h2>
+      </div>
+      <p
+        class="tech-font trailer-animate"
+        style="
+          color: var(--accent-cyan);
+          text-align: center;
+          margin-bottom: 4rem;
+          font-size: 1.2rem;
+          letter-spacing: 2px;
+        "
+      >
+        A history of technical excellence and executive leadership.
+      </p>
+      <div class="chrono-list" id="chrono-list">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- 6. CONTACT SECTION (SERVERLESS IFRAME SYSTEM) -->
+    <section id="contact" class="container contact-section toc-section">
+      <h2 class="contact-main-title art-font trailer-animate">
+        CONNECT WITH ME
+      </h2>
+
+      <div class="contact-grid trailer-animate">
+        <div class="contact-info-panel glass-panel">
+          <p class="tech-font contact-desc">
+            Whether you have a project idea, collaboration opportunity, or
+            simply want to connect, feel free to reach out through any of the
+            platforms below.
+          </p>
+
+          <a
+            href="mailto:davidnl@students.nu-clark.edu.ph"
+            class="contact-pill hover-target"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            <span>davidnl@students.nu-clark.edu.ph</span>
+          </a>
+          <a
+            href="mailto:nigeljvictorial999@gmail.com"
+            class="contact-pill hover-target"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            <span>nigeljvictorial999@gmail.com</span>
+          </a>
+          <a href="tel:+639152464318" class="contact-pill hover-target">
+            <i class="fa-solid fa-phone"></i>
+            <span>+63 915-246-4318</span>
+          </a>
+          <a href="tel:+639927371575" class="contact-pill hover-target">
+            <i class="fa-solid fa-phone"></i>
+            <span>+63 992-737-1575</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/nigel-david-3623b63a8/"
+            target="_blank"
+            class="contact-pill hover-target"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+            <span>Nigel David</span>
+          </a>
+          <a
+            href="https://github.com/nijol-dvd"
+            target="_blank"
+            class="contact-pill hover-target"
+          >
+            <i class="fa-brands fa-github"></i>
+            <span>nijol-dvd</span>
+          </a>
+        </div>
+
+        <div class="contact-form-panel glass-panel">
+          <h3 class="form-title tech-font">Get in touch</h3>
+          <p class="tech-font form-desc">
+            Have a question, project idea, or opportunity in mind? Feel free to
+            reach out — I'd love to connect and discuss how we can work
+            together.
+          </p>
+
+          <!-- Serverless FormSubmit Routing to hidden iframe (bypasses CORS blocks) -->
+          <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display: none"
+          ></iframe>
+          <form
+            class="custom-form"
+            id="contact-form"
+            action="https://formsubmit.co/nigeljvictorial999@gmail.com"
+            method="POST"
+            target="hidden_iframe"
+          >
+            <!-- Bypass standard captcha to ensure AJAX works smoothly -->
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Portfolio Contact Submission!"
+            />
+            <!-- Formsubmit explicit success template bypass -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://nigeljamesdavid.netlify.app"
+            />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Thank you for reaching out! This is an automated response confirming I have securely received your message from my portfolio. I will review your inquiry and get back to you shortly. Best regards, Nigel James David"
+            />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="form-group">
+              <label class="tech-font"
+                >Name<span class="asterisk">*</span></label
+              >
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+                class="tech-font hover-target"
+              />
+            </div>
+            <div class="form-group">
+              <label class="tech-font"
+                >Email (Must be valid)<span class="asterisk">*</span></label
+              >
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+                class="tech-font hover-target"
+              />
+            </div>
+            <div class="form-group">
+              <label class="tech-font"
+                >Subject<span class="asterisk">*</span></label
+              >
+              <input
+                type="text"
+                name="subject"
+                placeholder="Enter the subject of your message"
+                required
+                class="tech-font hover-target"
+              />
+            </div>
+            <div class="form-group">
+              <label class="tech-font"
+                >Message<span class="asterisk">*</span></label
+              >
+              <textarea
+                name="message"
+                placeholder="Enter your message"
+                rows="4"
+                required
+                class="tech-font hover-target"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-3d w-100 hover-target tech-font"
+              style="margin-top: 1rem"
+              id="submit-btn-main"
+            >
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (CYBER-GRID) -->
+    <footer class="custom-footer">
+      <div class="footer-grid container">
+        <div class="footer-col brand-col">
+          <h2 class="footer-name art-font">Nigel James David</h2>
+          <p class="footer-desc tech-font">
+            Software Developer & IT Student passionate about building meaningful
+            and impactful digital solutions.
+          </p>
+        </div>
+
+        <div class="footer-col links-col">
+          <h4 class="footer-heading tech-font">Quick Links</h4>
+          <ul class="tech-font">
+            <li><a href="#home" class="hover-target">Home</a></li>
+            <li><a href="#about" class="hover-target">About</a></li>
+            <li><a href="#skills" class="hover-target">Skills</a></li>
+            <li><a href="#journey" class="hover-target">Experiences</a></li>
+            <li><a href="#portfolio" class="hover-target">Portfolio</a></li>
+            <li><a href="#contact" class="hover-target">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col connect-col">
+          <h4 class="footer-heading tech-font">Connect</h4>
+          <ul class="tech-font">
+            <li>
+              <a
+                href="mailto:davidnl@students.nu-clark.edu.ph"
+                class="hover-target"
+                ><i class="fa-solid fa-envelope"></i> NU Email</a
+              >
+            </li>
+            <li>
+              <a href="mailto:nigeljvictorial999@gmail.com" class="hover-target"
+                ><i class="fa-solid fa-envelope"></i> Gmail</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/nijol-dvd"
+                target="_blank"
+                class="hover-target"
+                ><i class="fa-brands fa-github"></i> GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nigel-david-3623b63a8/"
+                target="_blank"
+                class="hover-target"
+                ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="tech-font container">
+          &copy; 2026 Nigel James David. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- FLYING PROFILE SCANNER -->
+    <div id="flying-profile" class="profile-frame hover-target">
+      <img
+        class="profile-bw"
+        src="NLD-Profile-CTWBDEVL.png"
+        alt="Nigel James Lumanlan David"
+        onerror="
+          this.src =
+            'https://via.placeholder.com/400x500/030b17/00f0ff?text=INSERT+NLD-Profile-CTWBDEVL.png'
+        "
+      />
+      <img
+        class="profile-color"
+        src="NLD-Profile-CTWBDEVL.png"
+        alt="Nigel James Lumanlan David"
+        onerror="
+          this.src =
+            'https://via.placeholder.com/400x500/030b17/00f0ff?text=INSERT+NLD-Profile-CTWBDEVL.png'
+        "
+      />
+      <div class="scan-line"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <script>
+      /* LOGO RAINBOW HOVER SPINNER & TOP SCROLL */
+      const logoNav = document.getElementById("nav-logo");
+      const logoSvg = logoNav.querySelector(".combined-logo-nav");
+      const rainbowColors = [
+        "#ff0000",
+        "#ff7f00",
+        "#ffff00",
+        "#00ff00",
+        "#0000ff",
+        "#4b0082",
+        "#9400d3",
+      ];
+      let colorIndex = 0;
+
+      logoNav.addEventListener("mouseenter", () => {
+        logoSvg.style.color = rainbowColors[colorIndex];
+        logoSvg.style.filter = `drop-shadow(0 0 20px ${rainbowColors[colorIndex]})`;
+        logoNav.style.transform = "rotate(360deg) scale(1.15)";
+        logoNav.style.transition =
+          "transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)";
+        colorIndex = (colorIndex + 1) % rainbowColors.length;
+      });
+
+      logoNav.addEventListener("mouseleave", () => {
+        logoSvg.style.color = "";
+        logoSvg.style.filter = "";
+        logoNav.style.transform = "rotate(0deg) scale(1)";
+      });
+
+      logoNav.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      /* CURSOR LOGIC */
+      const cursorDot = document.getElementById("cursor-dot");
+      const cursorRing = document.getElementById("cursor-ring");
+      let mouseX = 0,
+        mouseY = 0;
+      let ringX = 0,
+        ringY = 0;
+      window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorDot.style.left = `${mouseX}px`;
+        cursorDot.style.top = `${mouseY}px`;
+      });
+      function animateCursor() {
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+        cursorRing.style.left = `${ringX}px`;
+        cursorRing.style.top = `${ringY}px`;
+        requestAnimationFrame(animateCursor);
+      }
+      if (window.innerWidth > 900) {
+        animateCursor();
+      }
+
+      document
+        .querySelectorAll(".hover-target, a, button, .cert-img")
+        .forEach((el) => {
+          el.addEventListener("mouseenter", () =>
+            cursorRing.classList.add("hovered"),
+          );
+          el.addEventListener("mouseleave", () =>
+            cursorRing.classList.remove("hovered"),
+          );
+        });
+
+      /* SCROLL PROGRESS & SPLASH */
+      const scrollBar = document.getElementById("scroll-tracker-bar");
+      const scrollSplash = document.getElementById("scroll-splash");
+      let hasSplashed = false;
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        scrollBar.style.height = `${scrollPercent}%`;
+        if (scrollPercent >= 99) {
+          if (!hasSplashed) {
+            scrollSplash.classList.add("splashing");
+            hasSplashed = true;
+            setTimeout(() => scrollSplash.classList.remove("splashing"), 1000);
+          }
+        } else {
+          hasSplashed = false;
+        }
+      });
+
+      /* TOC HIGHLIGHTER */
+      const tocDots = document.querySelectorAll(".toc-dot");
+      const sections = document.querySelectorAll(".toc-section");
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (window.scrollY >= sectionTop - 300) {
+            current = section.getAttribute("id");
+          }
+        });
+        tocDots.forEach((dot) => {
+          dot.classList.remove("active");
+          if (dot.getAttribute("href").includes(current)) {
+            dot.classList.add("active");
+          }
+        });
+      });
+
+      /* STRICT FLYING PROFILE LOGIC (POSITION FIXED) */
+      const flyingProfile = document.getElementById("flying-profile");
+      const heroAnchor = document.getElementById("hero-anchor");
+      const aboutAnchor = document.getElementById("about-anchor");
+      let currentProfileState = -1;
+
+      function updateProfileFlight() {
+        if (window.innerWidth <= 900) {
+          flyingProfile.style.position = "relative";
+          flyingProfile.style.transform = "none";
+          heroAnchor.appendChild(flyingProfile);
+          return;
+        }
+        if (flyingProfile.parentElement !== document.body) {
+          document.body.appendChild(flyingProfile);
+        }
+
+        flyingProfile.style.position = "fixed";
+        flyingProfile.style.top = "0";
+        flyingProfile.style.left = "0";
+
+        const scrollY = window.scrollY;
+        const aboutTop = document.getElementById("about").offsetTop;
+        const skillsTop = document.getElementById("skills").offsetTop;
+
+        let newState =
+          scrollY >= aboutTop - window.innerHeight / 2 &&
+          scrollY < skillsTop - 200
+            ? 1
+            : 0;
+        currentProfileState = newState;
+        const targetAnchor =
+          currentProfileState === 1 ? aboutAnchor : heroAnchor;
+
+        const rect = targetAnchor.getBoundingClientRect();
+        flyingProfile.style.transform = `translate(${rect.left}px, ${rect.top}px)`;
+        flyingProfile.style.width = `${rect.width}px`;
+        flyingProfile.style.height = `${rect.height}px`;
+      }
+      window.addEventListener("scroll", updateProfileFlight);
+      window.addEventListener("resize", () => {
+        currentProfileState = -1;
+        updateProfileFlight();
+      });
+      window.addEventListener("load", () => {
+        setTimeout(updateProfileFlight, 100);
+      });
+
+      /* SKILLS FILTER LOGIC */
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const filterItems = document.querySelectorAll(".filter-item");
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filterValue = btn.getAttribute("data-filter");
+          filterItems.forEach((item) => {
+            if (
+              filterValue === "all" ||
+              item.getAttribute("data-category") === filterValue
+            ) {
+              item.classList.remove("hidden-filter");
+            } else {
+              item.classList.add("hidden-filter");
+            }
+          });
+        });
+      });
+
+      /* FULL-BLAST PORTFOLIO TOGGLE LOGIC */
+      const toggleProjects = document.getElementById("toggle-projects");
+      const toggleCerts = document.getElementById("toggle-certs");
+      const viewProjects = document.getElementById("view-projects");
+      const viewCerts = document.getElementById("view-certs");
+
+      function triggerBlast(btn, viewToShow, viewToHide) {
+        if (btn.classList.contains("active")) return;
+        btn.classList.add("blast");
+        setTimeout(() => btn.classList.remove("blast"), 600);
+        toggleProjects.classList.remove("active");
+        toggleCerts.classList.remove("active");
+        btn.classList.add("active");
+        viewToHide.style.display = "none";
+        viewToShow.style.display = "block";
+        viewToShow.classList.remove("active");
+        void viewToShow.offsetWidth;
+        viewToShow.classList.add("active");
+      }
+
+      toggleProjects.addEventListener("click", () =>
+        triggerBlast(toggleProjects, viewProjects, viewCerts),
+      );
+      toggleCerts.addEventListener("click", () =>
+        triggerBlast(toggleCerts, viewCerts, viewProjects),
+      );
+
+      /* FILTERED IT & LEADERSHIP TIMELINE CHRONOLOGY */
+      const chronologyData = [
+        {
+          year: "Grade 10 (2021-2022)",
+          title: "Best in TLE (ICT); 1st Grading",
+        },
+        {
+          year: "Grade 12 (2023-2024)",
+          title: "THE CLARION; News Editor Position",
+        },
+        {
+          year: "Grade 12 (2023-2024)",
+          title:
+            "Representative of the 2024 Division Schools Press Conference (DSPC)",
+        },
+        {
+          year: "1st Year College (2024-2025)",
+          title: "Promoted as the Head of Creatives at C.O.D.E.",
+        },
+        {
+          year: "1st Year College (2024-2025)",
+          title:
+            "Outstanding Contribution as an Organizer during Mr. & Ms. IT 2024",
+        },
+        {
+          year: "1st Year College (2024-2025)",
+          title: "Passed the CompTIA IT Fundamentals+ (ITF+) Certification",
+        },
+        {
+          year: "1st Year College (2024-2025)",
+          title:
+            "Participation in NAVIGATING SUCCESS: NU CLARK COPILOT AND CERTIFICATION SEMINAR",
+        },
+        {
+          year: "1st Year College (2024-2025)",
+          title: "Organized the IT Days 2025",
+        },
+        {
+          year: "1st Year College (2024-2025)",
+          title: "Held a COMEX Event 2025 by CODE at Mabalacat TVS",
+        },
+        {
+          year: "1st Year College (2024-2025)",
+          title: "Program Committee Head during the Project Netiquette Seminar",
+        },
+        {
+          year: "1st Year College (2024-2025)",
+          title: "Attended Cybersecurity Seminar: 'HACKERS GONNA HATE!'",
+        },
+        {
+          year: "1st Year College (2024-2025)",
+          title: "Participated in Phishing Awareness Campaign Training",
+        },
+        {
+          year: "2nd Year College (2025-2026)",
+          title:
+            "Participation in the Regional Assembly on Information Technology Education (RAITE)",
+        },
+        {
+          year: "2nd Year College (2025-2026)",
+          title:
+            "Participation in the Techvolution: Inspiring Digital Excellence Event",
+        },
+        {
+          year: "2nd Year College (2025-2026)",
+          title: "President, Consortium of Data Enthusiasts (C.O.D.E.)",
+        },
+        {
+          year: "2nd Year College (2025-2026)",
+          title: "Project Lead at Mr. and Ms. IT 2026",
+        },
+        {
+          year: "2nd Year College (2025-2026)",
+          title: "Project Lead at the Quiz Bee Competition: Stack IT Up!",
+        },
+        {
+          year: "2nd Year College (2025-2026)",
+          title: "Passed the Microsoft Office Specialist: Excel Associate",
+        },
+        {
+          year: "2nd Year College (2025-2026)",
+          title: "Passed the IT Specialist - Databases",
+        },
+        {
+          year: "2nd Year College (2025-2026)",
+          title: "Passed the Microsoft Office Specialist: Word Associate",
+        },
+        {
+          year: "2nd Year College (2025-2026)",
+          title:
+            "Participation in Privacy by Design Seminar: Compliance & Privacy",
+        },
+        {
+          year: "2nd Year College (2025-2026)",
+          title: "Class Representative; First, Second, and Third Term",
+        },
+      ];
+
+      const chronoList = document.getElementById("chrono-list");
+      chronologyData.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.className = `glass-panel chrono-item trailer-animate ${index % 2 === 0 ? "chrono-left" : "chrono-right"}`;
+        div.innerHTML = `<div class="chrono-year tech-font">${item.year}</div><h3 class="art-font">${item.title}</h3>`;
+        chronoList.appendChild(div);
+      });
+
+      /* 2-PHASE LOADER LOGIC (EXTENDED DELAY) */
+      setTimeout(() => {
+        const statusText = document.getElementById("loader-status");
+        const loaderBar = document.getElementById("loader-bar");
+        if (statusText) {
+          statusText.innerText = "SYSTEMS ONLINE // ACCESS GRANTED";
+          statusText.classList.add("complete-text");
+        }
+        if (loaderBar) loaderBar.classList.add("complete-bar");
+
+        setTimeout(() => {
+          const loader = document.getElementById("loader-wrapper");
+          if (loader) {
+            loader.classList.add("loaded");
+            setTimeout(() => (loader.style.display = "none"), 1000);
+            currentProfileState = -1;
+            updateProfileFlight();
+          }
+        }, 1000);
+      }, 4500);
+
+      /* CONFIRMATION & ROBUST IFRAME SUCCESS MODAL LOGIC */
+      const contactForm = document.getElementById("contact-form");
+      const confirmModal = document.getElementById("confirm-modal");
+      const successModal = document.getElementById("success-modal");
+      const btnYes = document.getElementById("btn-yes");
+      const btnNo = document.getElementById("btn-no");
+      const closeSuccessBtn = document.getElementById("close-modal-btn");
+      const submitBtn = document.getElementById("submit-btn-main");
+      let isFormValid = false;
+
+      contactForm.addEventListener("submit", function (e) {
+        if (!isFormValid) {
+          e.preventDefault();
+          confirmModal.style.display = "flex";
+        }
+      });
+
+      btnNo.addEventListener("click", () => {
+        confirmModal.style.display = "none";
+      });
+
+      btnYes.addEventListener("click", () => {
+        confirmModal.style.display = "none";
+        isFormValid = true;
+        submitBtn.innerHTML =
+          '<i class="fa-solid fa-spinner fa-spin"></i> Transmitting...';
+        submitBtn.disabled = true;
+        contactForm.submit();
+      });
+
+      document.getElementById("hidden_iframe").onload = function () {
+        if (isFormValid) {
+          successModal.style.display = "flex";
+          contactForm.reset();
+          submitBtn.innerHTML =
+            '<i class="fa-solid fa-paper-plane"></i> Send Message';
+          submitBtn.disabled = false;
+          isFormValid = false;
+        }
+      };
+
+      closeSuccessBtn.addEventListener("click", () => {
+        successModal.style.display = "none";
+      });
+
+      /* SCROLL REVEAL LOGIC */
+      const hiddenElements = document.querySelectorAll(".trailer-animate");
+      hiddenElements.forEach((el) => el.classList.add("hidden"));
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      setTimeout(() => {
+        document
+          .querySelectorAll(".hidden")
+          .forEach((el) => observer.observe(el));
+      }, 500);
+
+      /* PARTICLES LOGIC */
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#00f0ff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 2, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#0066ff",
+            opacity: 0.4,
+            width: 1.5,
+          },
+          move: { enable: true, speed: 1, out_mode: "out" },
+        },
+        interactivity: {
+          detect_on: "window",
+          events: { onhover: { enable: true, mode: "grab" }, resize: true },
+          modes: {
+            grab: {
+              distance: 250,
+              line_linked: { opacity: 0.8, color: "#00f0ff" },
+            },
+          },
+        },
+        retina_detect: true,
+      });
+
+      /* LIGHTBOX LOGIC */
+      const lightbox = document.getElementById("lightbox");
+      const fullImg = document.getElementById("full-img");
+      const closeBtnLightbox = document.querySelector(".close-lightbox");
+      document.querySelectorAll(".cert-img").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          fullImg.src = img.src;
+        });
+      });
+      closeBtnLightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) lightbox.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

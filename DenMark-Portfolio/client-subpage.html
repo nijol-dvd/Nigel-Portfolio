@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details | Den Mark C. Soriano</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">DCS.</div>
+      <ul class="nav-links">
+        <li><a href="client.html">Back to Home</a></li>
+      </ul>
+    </nav>
+
+    <section
+      class="container project-details"
+      style="padding-top: 120px; min-height: 100vh"
+    >
+      <h1 class="section-title slide-up">Project Details</h1>
+
+      <div class="project-showcase slide-up">
+        <img
+          src="https://via.placeholder.com/800x450/044952/10A4B0?text=Application+Screenshot+1"
+          alt="App Screenshot 1"
+          class="showcase-img"
+        />
+
+        <div class="project-description">
+          <h3>Technologies Used</h3>
+          <p>Java, Kotlin, Firebase, MySQL, Figma</p>
+
+          <h3 style="margin-top: 1.5rem">Project Overview</h3>
+          <p>
+            Designed and developed a comprehensive system focused on
+            productivity and task organization. The system includes separate
+            interfaces for administrators and users, bridging clean UI/UX with
+            robust backend database operations.
+          </p>
+
+          <h3 style="margin-top: 1.5rem">Key Features</h3>
+          <ul>
+            <li>Complete CRUD functionality</li>
+            <li>Admin dashboard for monitoring</li>
+            <li>User account management & database integration</li>
+            <li>Mobile-responsive UI/UX</li>
+            <li>Clean and modern application design</li>
+          </ul>
+        </div>
+
+        <img
+          src="https://via.placeholder.com/800x450/044952/10A4B0?text=Application+Screenshot+2"
+          alt="App Screenshot 2"
+          class="showcase-img"
+          style="margin-top: 2rem"
+        />
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Den Mark C. Soriano. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".slide-up")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NU Clark Quest - Online Application</title>
+  </head>
+  <body
+    style="
+      font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e9ecef;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      box-sizing: border-box;
+    "
+  >
+    <header
+      style="
+        background: linear-gradient(
+          135deg,
+          #16074c 0%,
+          #2a1675 50%,
+          #c28e28 100%
+        );
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <h1
+        style="
+          margin: 0;
+          font-size: 28px;
+          font-weight: 600;
+          letter-spacing: 1px;
+        "
+      >
+        NU CLARK QUEST
+      </h1>
+      <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9">
+        Online Application Portal
+      </p>
+    </header>
+
+    <main
+      style="
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+      "
+    >
+      <div
+        style="
+          background-color: #fff9e6;
+          border-left: 6px solid #16074c;
+          border-right: 1px solid #c28e28;
+          border-top: 1px solid #c28e28;
+          border-bottom: 1px solid #c28e28;
+          padding: 20px;
+          margin-bottom: 40px;
+          box-shadow: 4px 4px 0px rgba(194, 142, 40, 0.1);
+          box-sizing: border-box;
+        "
+      >
+        <div style="display: flex; align-items: center; gap: 15px">
+          <span style="font-size: 24px; color: #c28e28">&#9888;</span>
+          <div>
+            <h3
+              style="
+                margin: 0;
+                font-size: 16px;
+                color: #16074c;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+              "
+            >
+              Official Admission Reminder
+            </h3>
+            <p style="margin: 5px 0 0 0; font-size: 14px; color: #444">
+              Please provide your correct and complete information. Fields
+              marked with asterisk (<span
+                style="color: #d9534f; font-weight: bold"
+                >*</span
+              >) are required for processing.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <form action="/submit" method="post" style="margin: 0">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+          "
+        >
+          <section
+            style="
+              background-color: white;
+              border-radius: 8px;
+              padding: 30px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+              border-top: 5px solid #c28e28;
+              box-sizing: border-box;
+            "
+          >
+            <h2
+              style="
+                color: #16074c;
+                border-bottom: 2px solid #f4f7f6;
+                padding-bottom: 15px;
+                margin: 0 0 20px 0;
+                font-size: 18px;
+                text-transform: uppercase;
+              "
+            >
+              01. Application Term & Course/Strand
+            </h2>
+
+            <div style="display: flex; flex-direction: column; gap: 20px">
+              <div>
+                <label
+                  for="campus"
+                  style="
+                    display: block;
+                    font-weight: 600;
+                    color: #555;
+                    margin-bottom: 8px;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                  "
+                  >Campus: <span style="color: #d9534f">*</span></label
+                >
+                <select
+                  id="campus"
+                  name="campus"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    background-color: #f4f7f6;
+                    font-family: inherit;
+                  "
+                >
+                  <option value="" disabled selected>Select a Campus</option>
+                  <optgroup label="National Capital Region (NCR)">
+                    <option>NU Manila</option>
+                    <option>NU Nazareth</option>
+                    <option>NU Fairview</option>
+                    <option>NU MOA</option>
+                    <option>NU East Ortigas</option>
+                    <option>NU Las Piñas</option>
+                  </optgroup>
+                  <optgroup label="Region III (Central Luzon)">
+                    <option>NU Baliwag</option>
+                    <option>NU Clark</option>
+                  </optgroup>
+                  <optgroup label="Region IV-A (CALABARZON)">
+                    <option>NU Laguna</option>
+                    <option>NU Dasmariñas</option>
+                    <option>NU Lipa</option>
+                  </optgroup>
+                  <optgroup label="Region VII (Central Visayas)">
+                    <option>NU Cebu</option>
+                  </optgroup>
+                  <optgroup label="Region XI (Davao Region)">
+                    <option>NU Davao</option>
+                  </optgroup>
+                  <optgroup label="Region XVIII (Negros Island Region)">
+                    <option>NU Bacolod</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px"
+              >
+                <div>
+                  <label
+                    for="academic_year"
+                    style="
+                      display: block;
+                      font-weight: 600;
+                      color: #555;
+                      margin-bottom: 8px;
+                      font-size: 13px;
+                    "
+                    >ACADEMIC YEAR: *</label
+                  >
+                  <select
+                    id="academic_year"
+                    name="academic_year"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 12px;
+                      border: 1px solid #ccc;
+                      border-radius: 5px;
+                      background-color: #f4f7f6;
+                      font-family: inherit;
+                    "
+                  >
+                    <option>2026 - 2027</option>
+                    <option>2027 - 2028</option>
+                    <option>2028 - 2029</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    for="academic_term"
+                    style="
+                      display: block;
+                      font-weight: 600;
+                      color: #555;
+                      margin-bottom: 8px;
+                      font-size: 13px;
+                    "
+                    >ACADEMIC TERM: *</label
+                  >
+                  <select
+                    id="academic_term"
+                    name="academic_term"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 12px;
+                      border: 1px solid #ccc;
+                      border-radius: 5px;
+                      background-color: #f4f7f6;
+                      font-family: inherit;
+                    "
+                  >
+                    <option>1st</option>
+                    <option>2nd</option>
+                    <option>3rd</option>
+                    <option>Summer</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="applying_for"
+                  style="
+                    display: block;
+                    font-weight: 600;
+                    color: #555;
+                    margin-bottom: 8px;
+                    font-size: 13px;
+                  "
+                  >APPLYING FOR: <span style="color: #d9534f">*</span></label
+                >
+                <select
+                  id="applying_for"
+                  name="applying_for"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    background-color: #f4f7f6;
+                    font-family: inherit;
+                  "
+                >
+                  <option value="" disabled selected>Select Entry Level</option>
+                  <optgroup label="Basic Education">
+                    <option>Grade 11</option>
+                    <option>Grade 12</option>
+                  </optgroup>
+                  <optgroup label="Higher Education">
+                    <option>Freshman</option>
+                    <option>Transferee</option>
+                    <option>Second Degree Taker</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="academic_program"
+                  style="
+                    display: block;
+                    font-weight: 600;
+                    color: #555;
+                    margin-bottom: 8px;
+                    font-size: 13px;
+                  "
+                  >ACADEMIC PROGRAM:
+                  <span style="color: #d9534f">*</span></label
+                >
+                <select
+                  id="academic_program"
+                  name="academic_program"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    background-color: #f4f7f6;
+                    font-family: inherit;
+                  "
+                >
+                  <option value="" disabled selected>Select Program</option>
+                  <optgroup label="Senior High School (SHS)">
+                    <option>COMPUTING AND TECHNOLOGIES (STEM_CT)</option>
+                    <option>
+                      EDUCATION, ARTS AND SOCIAL SCIENCES (AHSS_EASS)
+                    </option>
+                    <option>ENGINEERING AND ARCHITECTURE (STEM_EA)</option>
+                    <option>MANAGEMENT AND ACCOUNTANCY (BUEN_MA)</option>
+                    <option>SCIENCES AND ALLIED HEALTH (STEM_SAH)</option>
+                  </optgroup>
+                  <optgroup
+                    label="School of Education, Arts, and Sciences (SEAS)"
+                  >
+                    <option>BACHELOR OF ARTS IN COMMUNICATION (ABComm)</option>
+                    <option>
+                      BACHELOR OF ARTS IN POLITICAL SCIENCE (BAPolSci)
+                    </option>
+                    <option>
+                      BACHELOR OF SCIENCE IN MEDICAL TECHNOLOGY (BSMT)
+                    </option>
+                    <option>BACHELOR OF SCIENCE IN PSYCHOLOGY (BSPsy)</option>
+                    <option>DOCTOR OF DENTAL MEDICINE (DMD)</option>
+                  </optgroup>
+                  <optgroup
+                    label="School of Accountancy, Business and Management (SABM)"
+                  >
+                    <option>
+                      BACHELOR OF SCIENCE IN ACCOUNTANCY (BSAccountancy)
+                    </option>
+                    <option>
+                      BS IN BUSINESS ADMINISTRATION MAJOR IN MARKETING
+                      MANAGEMENT
+                    </option>
+                    <option>
+                      BACHELOR OF SCIENCE IN MANAGEMENT ACCOUNTING (BSMA)
+                    </option>
+                    <option>
+                      BACHELOR OF SCIENCE IN TOURISM MANAGEMENT (BSTM)
+                    </option>
+                  </optgroup>
+                  <optgroup
+                    label="School of Engineering, Architecture and Technology (SEAT)"
+                  >
+                    <option>
+                      BACHELOR OF SCIENCE IN ARCHITECTURE (BSArch-MNL)
+                    </option>
+                    <option>
+                      BACHELOR OF SCIENCE IN CIVIL ENGINEERING (BSCE)
+                    </option>
+                    <option>
+                      BACHELOR OF SCIENCE IN COMPUTER ENGINEERING (BSCpE-MNL)
+                    </option>
+                    <option>
+                      BS IN COMPUTER SCIENCE SPECIALIZATION IN AI (BSCS)
+                    </option>
+                    <option>
+                      BS IN INFORMATION TECHNOLOGY SPECIALIZATION IN MOBILE AND
+                      WEB (BSIT-MNL)
+                    </option>
+                  </optgroup>
+                </select>
+                <span
+                  style="
+                    display: block;
+                    margin-top: 6px;
+                    font-size: 11px;
+                    color: #888;
+                    font-style: italic;
+                  "
+                  >Select entry level to view offered courses.</span
+                >
+              </div>
+            </div>
+          </section>
+
+          <section
+            style="
+              background-color: white;
+              border-radius: 8px;
+              padding: 30px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+              border-top: 5px solid #16074c;
+              box-sizing: border-box;
+            "
+          >
+            <h2
+              style="
+                color: #16074c;
+                border-bottom: 2px solid #f4f7f6;
+                padding-bottom: 10px;
+                margin: 0 0 20px 0;
+                font-size: 18px;
+                text-transform: uppercase;
+              "
+            >
+              02. Basic Information
+            </h2>
+            <div
+              style="
+                background-color: #fdf0f0;
+                border-left: 4px solid #d9534f;
+                padding: 12px;
+                border-radius: 4px;
+                margin-bottom: 20px;
+                font-size: 13px;
+                color: #d9534f;
+                line-height: 1.5;
+              "
+            >
+              <strong>Note:</strong> Please write your names based on your
+              PSA/NSO-copy of birth certificate. For married females who wanted
+              to use their married name, write your names based on your marriage
+              certificate.
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div>
+                <label
+                  for="first_name"
+                  style="
+                    font-weight: 600;
+                    font-size: 13px;
+                    color: #555;
+                    display: block;
+                    margin-bottom: 5px;
+                  "
+                  >FIRST NAME: <span style="color: #d9534f">*</span></label
+                >
+                <input
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  placeholder="First Name"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                    background: #f4f7f6;
+                    box-sizing: border-box;
+                  "
+                />
+              </div>
+              <div>
+                <label
+                  for="middle_name"
+                  style="
+                    font-weight: 600;
+                    font-size: 13px;
+                    color: #555;
+                    display: block;
+                    margin-bottom: 5px;
+                  "
+                  >MIDDLE NAME:</label
+                >
+                <input
+                  type="text"
+                  id="middle_name"
+                  name="middle_name"
+                  placeholder="Leave blank if N/A"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                    background: #f4f7f6;
+                    box-sizing: border-box;
+                  "
+                />
+              </div>
+              <div>
+                <label
+                  for="last_name"
+                  style="
+                    font-weight: 600;
+                    font-size: 13px;
+                    color: #555;
+                    display: block;
+                    margin-bottom: 5px;
+                  "
+                  >LAST NAME: <span style="color: #d9534f">*</span></label
+                >
+                <input
+                  type="text"
+                  id="last_name"
+                  name="last_name"
+                  placeholder="Last Name"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                    background: #f4f7f6;
+                    box-sizing: border-box;
+                  "
+                />
+              </div>
+
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px"
+              >
+                <div>
+                  <label
+                    for="dob"
+                    style="
+                      font-weight: 600;
+                      font-size: 13px;
+                      color: #555;
+                      display: block;
+                      margin-bottom: 5px;
+                    "
+                    >BIRTH DATE: <span style="color: #d9534f">*</span></label
+                  >
+                  <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 10px;
+                      border-radius: 5px;
+                      border: 1px solid #ccc;
+                      background: #f4f7f6;
+                      box-sizing: border-box;
+                    "
+                  />
+                </div>
+                <div>
+                  <label
+                    for="nationality"
+                    style="
+                      font-weight: 600;
+                      font-size: 13px;
+                      color: #555;
+                      display: block;
+                      margin-bottom: 5px;
+                    "
+                    >NATIONALITY: <span style="color: #d9534f">*</span></label
+                  >
+                  <select
+                    id="nationality"
+                    name="nationality"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 10px;
+                      border-radius: 5px;
+                      border: 1px solid #ccc;
+                      background: #f4f7f6;
+                      font-family: inherit;
+                    "
+                  >
+                    <option value="" disabled selected>Select</option>
+                    <option>Filipino</option>
+                    <option>Afghan</option>
+                    <option>Aland Islands</option>
+                    <option>Albanian</option>
+                    <option>Algerian</option>
+                    <option>American</option>
+                    <option>American Samoan</option>
+                    <option>Andorran</option>
+                    <option>Angolar</option>
+                    <option>Anguilla</option>
+                    <option>Antarctica</option>
+                    <option>Antiguans, Barbudans</option>
+                    <option>Argentinean</option>
+                    <option>Armenian</option>
+                    <option>Aruban</option>
+                    <option>Asia / Pacific Region</option>
+                    <option>Australian</option>
+                    <option>Austrian</option>
+                    <option>Azerbaijani</option>
+                    <option>Bahamian</option>
+                    <option>Bahraini</option>
+                    <option>Bangladeshi</option>
+                    <option>Barbadian</option>
+                    <option>Belarusian</option>
+                    <option>Belgian</option>
+                    <option>Belizean</option>
+                    <option>Beninese</option>
+                    <option>Bermudian</option>
+                    <option>Bhutanese</option>
+                    <option>Bolivian</option>
+                    <option>Bonaire, Sint Eustatius and Saba</option>
+                    <option>Bosnian, Herzegovinian</option>
+                    <option>Bouvet Island</option>
+                    <option>Brazilian</option>
+                    <option>British</option>
+                    <option>British Indian Ocean Territory</option>
+                    <option>Bruneian</option>
+                    <option>Bulgarian</option>
+                    <option>Burkinabe</option>
+                    <option>Burmese</option>
+                    <option>Burundian</option>
+                    <option>Cambodian</option>
+                    <option>Cameroonian</option>
+                    <option>Canadian</option>
+                    <option>Cape Verdian</option>
+                    <option>Cayman Islands</option>
+                    <option>Central African</option>
+                    <option>Chadian</option>
+                    <option>Chilean</option>
+                    <option>Chinese</option>
+                    <option>Christmas Island</option>
+                    <option>Cocos (Keeling) Islands</option>
+                    <option>Colombian</option>
+                    <option>Comoran</option>
+                    <option>Congolese</option>
+                    <option>Cook Islands</option>
+                    <option>Costa Rican</option>
+                    <option>Croatian</option>
+                    <option>Cuban</option>
+                    <option>Curacao</option>
+                    <option>Cypriot</option>
+                    <option>Czech</option>
+                    <option>Danish</option>
+                    <option>Djibouti</option>
+                    <option>Dominican</option>
+                    <option>Dutch</option>
+                    <option>East Timorese</option>
+                    <option>Ecuadorean</option>
+                    <option>Egyptian</option>
+                    <option>Emirian</option>
+                    <option>Equatorial Guinean</option>
+                    <option>Eritrean</option>
+                    <option>Estonian</option>
+                    <option>Ethiopian</option>
+                    <option>Falkland Islands (Malvinas)</option>
+                    <option>Faroe Islands</option>
+                    <option>Fijian</option>
+                    <option>Finnish</option>
+                    <option>French</option>
+                    <option>French Guiana</option>
+                    <option>French Polynesia</option>
+                    <option>French Southern Territories</option>
+                    <option>Gabonese</option>
+                    <option>Gambian</option>
+                    <option>Georgian</option>
+                    <option>German</option>
+                    <option>Ghanaian</option>
+                    <option>Gibraltar</option>
+                    <option>Greek</option>
+                    <option>Greenland</option>
+                    <option>Grenadian</option>
+                    <option>Guadeloupe</option>
+                    <option>Guamanian</option>
+                    <option>Guatemalan</option>
+                    <option>Guernsey</option>
+                    <option>Guinea-Bissauan</option>
+                    <option>Guinean</option>
+                    <option>Guyanese</option>
+                    <option>Haitian</option>
+                    <option>Heard Island and Mcdonald Islands</option>
+                    <option>Honduran</option>
+                    <option>Hong Kong</option>
+                    <option>Hungarian</option>
+                    <option>I-Kiribati</option>
+                    <option>Icelander</option>
+                    <option>Indian</option>
+                    <option>Indonesian</option>
+                    <option>Iranian</option>
+                    <option>Iraqi</option>
+                    <option>Irish</option>
+                    <option>Isle of Man</option>
+                    <option>Israeli</option>
+                    <option>Italian</option>
+                    <option>Ivorian</option>
+                    <option>Jamaican</option>
+                    <option>Japanese</option>
+                    <option>Jersey</option>
+                    <option>Jordanian</option>
+                    <option>Kazakhstani</option>
+                    <option>Kenyan</option>
+                    <option>Kirghiz</option>
+                    <option>Kittian and Nevisian</option>
+                    <option>Kosovo</option>
+                    <option>Kuwaiti</option>
+                    <option>Laotian</option>
+                    <option>Latvian</option>
+                    <option>Lebanese</option>
+                    <option>Liberian</option>
+                    <option>Libyan</option>
+                    <option>Liechtensteiner</option>
+                    <option>Lithuanian</option>
+                    <option>Luxembourger</option>
+                    <option>Macanese</option>
+                    <option>Macedonian</option>
+                    <option>Malagasy</option>
+                    <option>Malawian</option>
+                    <option>Malaysian</option>
+                    <option>Maldivan</option>
+                    <option>Malian</option>
+                    <option>Maltese</option>
+                    <option>Marshallese</option>
+                    <option>Martinique</option>
+                    <option>Mauritanian</option>
+                    <option>Mauritian</option>
+                    <option>Mayotte</option>
+                    <option>Mexican</option>
+                    <option>Micronesian</option>
+                    <option>Moldovan</option>
+                    <option>Monegasque</option>
+                    <option>Mongol</option>
+                    <option>Montenegro</option>
+                    <option>Montserrat</option>
+                    <option>Moroccan</option>
+                    <option>Mosotho</option>
+                    <option>Motswana</option>
+                    <option>Mozambican</option>
+                    <option>Namibian</option>
+                    <option>Nauruan</option>
+                    <option>Nepalese</option>
+                    <option>Netherlands Antilles</option>
+                    <option>New Caledonia</option>
+                    <option>New Zealander</option>
+                    <option>Ni-Vanuatu</option>
+                    <option>Nicaraguan</option>
+                    <option>Nigerian</option>
+                    <option>Nigerien</option>
+                    <option>Niue</option>
+                    <option>none</option>
+                    <option>Norfolk Island</option>
+                    <option>North Korean</option>
+                    <option>Northern Mariana Islands</option>
+                    <option>Norwegian</option>
+                    <option>Omani</option>
+                    <option>Pakistani</option>
+                    <option>Palauan</option>
+                    <option>Palestinian</option>
+                    <option>Panamanian</option>
+                    <option>Papua New Guinean</option>
+                    <option>Paraguayan</option>
+                    <option>Peruvian</option>
+                    <option>Pitcairn</option>
+                    <option>Polish</option>
+                    <option>Portuguese</option>
+                    <option>Puerto Rican</option>
+                    <option>Qatari</option>
+                    <option>Reunion</option>
+                    <option>Romanian</option>
+                    <option>Russian</option>
+                    <option>Rwandan</option>
+                    <option>Saint Barthelemy</option>
+                    <option>Saint Helena</option>
+                    <option>Saint Lucian</option>
+                    <option>Saint Martin</option>
+                    <option>Saint Pierre and Miquelon</option>
+                    <option>Saint Vincent and the Grenadines</option>
+                    <option>Salvadoran</option>
+                    <option>Sammarinese</option>
+                    <option>Samoan</option>
+                    <option>Sao Tomean</option>
+                    <option>Saudi Arabian</option>
+                    <option>Senegalese</option>
+                    <option>Serb</option>
+                    <option>Serbian</option>
+                    <option>Seychellois</option>
+                    <option>Sierra Leonean</option>
+                    <option>Singaporean</option>
+                    <option>Sint Maarten</option>
+                    <option>Slovak</option>
+                    <option>Slovene</option>
+                    <option>Solomon Islander</option>
+                    <option>Somali</option>
+                    <option>South African</option>
+                    <option>
+                      South Georgia and the South Sandwich Islands
+                    </option>
+                    <option>South Korean</option>
+                    <option>South Sudan</option>
+                    <option>Spanish</option>
+                    <option>Sri Lankan</option>
+                    <option>Sudanese</option>
+                    <option>Surinamer</option>
+                    <option>Svalbard and Jan Mayen</option>
+                    <option>Swazi</option>
+                    <option>Swedish</option>
+                    <option>Swiss</option>
+                    <option>Syrian</option>
+                    <option>Tadzhik</option>
+                    <option>Taiwanese</option>
+                    <option>Tanzanian</option>
+                    <option>Thai</option>
+                    <option>Togolese</option>
+                    <option>Tokelau</option>
+                    <option>Tongan</option>
+                    <option>Trinidadian</option>
+                    <option>Tunisian</option>
+                    <option>Turkish</option>
+                    <option>Turkmen</option>
+                    <option>Turks and Caicos Islands</option>
+                    <option>Tuvaluan</option>
+                    <option>Ugandan</option>
+                    <option>Ukrainian</option>
+                    <option>United States Minor Outlying Islands</option>
+                    <option>Uruguayan</option>
+                    <option>Uzbekistani</option>
+                    <option>Venezuelan</option>
+                    <option>Vietnamese</option>
+                    <option>Virgin Islands, British</option>
+                    <option>Virgin Islands, U.S.</option>
+                    <option>Wallis and Futuna</option>
+                    <option>Western Sahara</option>
+                    <option>Yemeni</option>
+                    <option>Zambian</option>
+                    <option>Zimbabwean</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label
+                  for="email"
+                  style="
+                    font-weight: 600;
+                    font-size: 13px;
+                    color: #555;
+                    display: block;
+                    margin-bottom: 5px;
+                  "
+                  >EMAIL ADDRESS: <span style="color: #d9534f">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="example@email.com"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                    background: #f4f7f6;
+                    box-sizing: border-box;
+                  "
+                />
+              </div>
+              <div>
+                <label
+                  for="mobile"
+                  style="
+                    font-weight: 600;
+                    font-size: 13px;
+                    color: #555;
+                    display: block;
+                    margin-bottom: 5px;
+                  "
+                  >MOBILE NO.: <span style="color: #d9534f">*</span></label
+                >
+                <input
+                  type="text"
+                  id="mobile"
+                  name="mobile"
+                  placeholder="(09) XXXX-XXXX"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                    background: #f4f7f6;
+                    box-sizing: border-box;
+                  "
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section
+          style="
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-left: 10px solid #555555;
+            box-sizing: border-box;
+          "
+        >
+          <h2
+            style="
+              color: #16074c;
+              border-bottom: 2px solid #d1e1e8;
+              padding-bottom: 15px;
+              margin: 0 0 30px 0;
+              font-size: 18px;
+              text-transform: uppercase;
+            "
+          >
+            03. Required Disclosures & Message
+          </h2>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 2fr;
+              gap: 30px;
+              margin-bottom: 40px;
+            "
+          >
+            <div>
+              <p
+                style="
+                  font-weight: 600;
+                  font-size: 14px;
+                  margin: 0 0 15px 0;
+                  color: #16074c;
+                "
+              >
+                SELECT GENDER:
+              </p>
+              <div style="margin-bottom: 10px">
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  style="accent-color: #16074c"
+                />
+                <label for="male" style="font-size: 14px; cursor: pointer"
+                  >Male</label
+                >
+              </div>
+              <div style="margin-bottom: 10px">
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="female"
+                  style="accent-color: #16074c"
+                />
+                <label for="female" style="font-size: 14px; cursor: pointer"
+                  >Female</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="other"
+                  name="gender"
+                  value="other"
+                  style="accent-color: #16074c"
+                />
+                <label for="other" style="font-size: 14px; cursor: pointer"
+                  >Other</label
+                >
+              </div>
+            </div>
+            <div>
+              <label
+                for="message"
+                style="
+                  font-weight: 600;
+                  font-size: 14px;
+                  display: block;
+                  margin-bottom: 10px;
+                  color: #16074c;
+                "
+                >ADDITIONAL REMARKS / MESSAGE:</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Type any additional information or inquiries here..."
+                style="
+                  width: 100%;
+                  height: 100px;
+                  padding: 12px;
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                  background: white;
+                  font-family: inherit;
+                  box-sizing: border-box;
+                  resize: vertical;
+                "
+              ></textarea>
+            </div>
+          </div>
+
+          <div
+            style="
+              background-color: white;
+              padding: 25px;
+              border-radius: 6px;
+              border: 1px solid #d1e1e8;
+              box-sizing: border-box;
+            "
+          >
+            <div style="margin-bottom: 20px">
+              <h4 style="margin: 0 0 10px 0; font-size: 15px; color: #16074c">
+                Data Privacy Notice
+              </h4>
+              <div style="display: flex; align-items: flex-start; gap: 12px">
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  name="privacy"
+                  required
+                  style="
+                    width: 18px;
+                    height: 18px;
+                    margin-top: 3px;
+                    accent-color: #16074c;
+                  "
+                />
+                <label
+                  for="privacy"
+                  style="font-size: 13px; color: #444; line-height: 1.6"
+                  >By completing and submitting this application, I hereby
+                  authorize National University to process my personal data to
+                  facilitate my application and reach out to me via phone,
+                  email, or other messaging platforms regarding its status. In
+                  the event that I no longer wish to be contacted, I will inform
+                  National University accordingly.</label
+                >
+              </div>
+            </div>
+
+            <div style="margin-bottom: 20px">
+              <h4 style="margin: 0 0 10px 0; font-size: 15px; color: #16074c">
+                Data Consent
+              </h4>
+              <div style="display: flex; align-items: flex-start; gap: 12px">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  name="consent"
+                  required
+                  style="
+                    width: 18px;
+                    height: 18px;
+                    margin-top: 3px;
+                    accent-color: #16074c;
+                  "
+                />
+                <label
+                  for="consent"
+                  style="font-size: 13px; color: #444; line-height: 1.6"
+                  >I have read and understood how my personal information will
+                  be handled by National University. I hereby authorize the
+                  university to collect and process my data for the purposes
+                  described above.</label
+                >
+              </div>
+            </div>
+
+            <div style="padding-top: 15px; border-top: 1px dashed #ccc">
+              <h4 style="margin: 0 0 8px 0; font-size: 15px; color: #16074c">
+                Data Retention
+              </h4>
+              <p
+                style="
+                  font-size: 13px;
+                  color: #444;
+                  line-height: 1.6;
+                  margin: 0;
+                "
+              >
+                The data collected in NU Quest will be retained or kept within
+                the year of application. After which, it will be handled
+                accordingly based on the university policy.
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 15px; margin-top: 40px">
+            <button
+              type="submit"
+              style="
+                padding: 14px 28px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                background-color: #5cb85c;
+                color: white;
+                font-weight: bold;
+                font-family: inherit;
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <span style="font-size: 18px">&#10004;</span> Create Account
+            </button>
+            <button
+              type="reset"
+              style="
+                padding: 14px 28px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                background-color: #d9534f;
+                color: white;
+                font-weight: bold;
+                font-family: inherit;
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <span style="font-size: 18px">&#10006;</span> Cancel
+            </button>
+          </div>
+        </section>
+      </form>
+    </main>
+
+    <footer
+      style="
+        background: linear-gradient(
+          135deg,
+          #16074c 0%,
+          #2a1675 50%,
+          #c28e28 100%
+        );
+        color: white;
+        text-align: center;
+        padding: 25px;
+        font-size: 14px;
+        margin-top: 40px;
+      "
+    >
+      <p style="margin: 0; font-size: 13px; line-height: 1.8; color: #fff">
+        &copy; 2026 National University Clark &bull; Nigel James Lumanlan David
+        (2024-1095959)<br />
+        BS Information Technology &bull; 3rd Term AY2025-2026 &bull; Education
+        that works.<br />
+        Clark Tech Hub 8, SM City Clark Expansion, Clark-Mabalacat-Angeles Road,
+        Barangay Dau, 2010 Mabalacat City, Pampanga<br />
+        <a
+          href="https://www.national-u.edu.ph"
+          target="_blank"
+          style="color: #c28e28; text-decoration: none; font-weight: bold"
+          >www.national-u.edu.ph</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
