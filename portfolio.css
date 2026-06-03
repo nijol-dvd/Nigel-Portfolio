@@ -1958,17 +1958,16 @@ button:disabled {
   }
   /* EMERGENCY MOBILE BLUR FIX */
   @media (max-width: 900px) {
+    /* NUCLEAR BLUR FIX FOR MOBILE */
     .hidden,
-    .trailer-animate {
+    .trailer-animate,
+    .project-card,
+    .glass-panel {
       opacity: 1 !important;
       transform: none !important;
-      filter: blur(0px) none !important;
-      -webkit-filter: blur(0px) none !important;
+      filter: none !important;
+      -webkit-filter: none !important;
       letter-spacing: normal !important;
-    }
-    html,
-    body {
-      overflow-x: visible !important;
     }
   }
 }
