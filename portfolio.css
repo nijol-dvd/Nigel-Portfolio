@@ -1956,4 +1956,19 @@ button:disabled {
     left: 10px !important;
     transform: none !important;
   }
+  /* EMERGENCY MOBILE BLUR FIX */
+  @media (max-width: 900px) {
+    .hidden,
+    .trailer-animate {
+      opacity: 1 !important;
+      transform: none !important;
+      filter: blur(0px) none !important;
+      -webkit-filter: blur(0px) none !important;
+      letter-spacing: normal !important;
+    }
+    html,
+    body {
+      overflow-x: visible !important;
+    }
+  }
 }
